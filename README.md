@@ -129,3 +129,7 @@
 - 需要按第一只的步骤重新配置大模型
 - 安装企业微信插件
 - 配对企业微信
+
+## 所有命令都得加上--profile dgr3
+- openclaw --profile dgr3 gateway restart
+- openclaw --profile dgr3 dashboard
