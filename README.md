@@ -1,4 +1,4 @@
-# <span style="color:#ff6600;">小龙虾 OpenClaw Win安装教程
+# <span style="color:#ff6600;">小龙虾 OpenClaw Win安装教程 </span>
 - openclaw地址:https://github.com/openclaw/openclaw
 - 安装文档:https://docs.openclaw.ai/start/getting-started
 
