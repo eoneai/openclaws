@@ -116,7 +116,6 @@
 ## 1. 配置
 - 使用命令：openclaw --profile code configure开始第二只的配置
 - 选择Local(this machine)
-- 选择workspace。修改为C:\Users\Administrator\.openclaw-code\workspace
 - 选择Gateway
 - 输入端口号(没占用的)，默认第一只是18789，这里可以写18790
 - Gateway bind mode:选择Loopback
@@ -130,12 +129,17 @@
 - 由于已经安装过，再次安装会报错，所以直接将原来的复制过来
 - 目录：C:\Users\Administrator\.openclaw\extensions
 
+## 复制openclaw.json到.openclaw-code目录
+
 ## 2. 重新配置企业微信
 - openclaw --profile code configure
 - 选择Channels-> Configure/link
 - 选择企业微信，后面操作与第一次一样
 
-## 复制openclaw.json到.openclaw-code目录
+## 重新配置workspace和端口
+- 使用命令：openclaw --profile code configure
+- 选择workspace。修改为C:\Users\Administrator\.openclaw-code\workspace
+- 选择Gateway，确保端口没占用且重新生成Token
 
 ## 3. 所有命令都得加上--profile code
 - openclaw --profile code gateway restart
