@@ -113,7 +113,7 @@
 - 配置向导：openclaw configure
 
 # 同一台电脑配置第二只龙虾
-## 配置
+## 1. 配置
 - 使用命令：openclaw --profile dgr2 configure开始第二只的配置
 - 选择Local(this machine)
 - 选择Gateway
@@ -125,11 +125,11 @@
 - 下一步显示token，直接回车
 - 完成
 
-## 重新配置模型、插件
+## 2. 重新配置模型、插件
 - 需要按第一只的步骤重新配置大模型
 - 安装企业微信插件
 - 配对企业微信
 
-## 所有命令都得加上--profile dgr3
+## 3. 所有命令都得加上--profile dgr3
 - openclaw --profile dgr3 gateway restart
 - openclaw --profile dgr3 dashboard
