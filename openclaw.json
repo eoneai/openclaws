@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-27T06:34:40.411Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-24T08:08:01.767Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "my": {
+        "baseUrl": "http://140.210.197.137:23000",
+        "apiKey": "你的API-Key(sk-开头)",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-6",
+            "name": "Claude Sonnet 4.6",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "claude-opus-4-6",
+            "name": "Claude Opus 4.6",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "my-gpt": {
+        "baseUrl": "http://140.210.197.137:23000/v1",
+        "apiKey": "你的API-Key(sk-开头)",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "gpt-5.4",
+            "name": "gpt 5.4",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "my-gpt/gpt-5.4",
+        "fallbacks": [
+        ]
+      },
+      "models": {
+        "my/claude-sonnet-4-6": {
+          "alias": "claude4-6"
+        },
+        "my/claude-opus-4-6": {
+          "alias": "claude opus 4-6"
+        },
+        "my-gpt/gpt-5.4": {
+          "alias": "gpt 5.4"
+        }
+      },
+      "workspace": "C:\\Users\\你的用户名\\.openclaw\\workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "alsoAllow": [
+      "wecom_mcp"
+    ]
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "wecom": {
+      "enabled": true,
+      "botId": "你的BotID",
+      "secret": "你的Secret",
+      "allowFrom": [],
+      "dmPolicy": "pairing"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "5c603c5b9e8dd38ff2dec521c3f392c036669ae3312020e0"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "wecom-openclaw-plugin": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "wecom-openclaw-plugin": {
+        "source": "npm",
+        "spec": "@wecom/wecom-openclaw-plugin",
+        "installPath": "C:\\Users\\Administrator\\.openclaw\\extensions\\wecom-openclaw-plugin",
+        "version": "2026.3.26",
+        "resolvedName": "@wecom/wecom-openclaw-plugin",
+        "resolvedVersion": "2026.3.26",
+        "resolvedSpec": "@wecom/wecom-openclaw-plugin@2026.3.26",
+        "integrity": "sha512-I7ZNO2UYQ0YyrRGhpqRKJgo7cCO3ONZtTO/C8sOUcg0KpELqEE2HVYP/7l5eWRB7v1HT0RI/SPnG3UTviGqAXA==",
+        "shasum": "dd930c6d32788b0f0a4d4763b5b29a60dd23138a",
+        "resolvedAt": "2026-03-27T06:34:36.987Z",
+        "installedAt": "2026-03-27T06:34:40.326Z"
+      }
+    }
+  }
+}
