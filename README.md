@@ -136,12 +136,12 @@
 - 选择Channels-> Configure/link
 - 选择企业微信，后面操作与第一次一样
 
-## 重新配置workspace和端口
+## 3. 重新配置workspace和端口
 - 使用命令：openclaw --profile code configure
 - 选择workspace。修改为C:\Users\Administrator\.openclaw-code\workspace
 - 选择Gateway，确保端口没占用且重新生成Token
 
-## 3. 所有命令都得加上--profile code
+## 4. 所有命令都得加上--profile code
 - openclaw --profile code gateway restart
 - openclaw --profile code dashboard
-- openclaw --profile dgr3 gateway install
+- openclaw --profile code gateway install
