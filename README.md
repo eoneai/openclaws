@@ -123,15 +123,21 @@
 - Gateway auth:选择Token
 - Tailscale exposure:选择Off
 - Gateway token source:选择Generate/store plaintext token
-- 下一步显示token，直接回车
+- 下一步显示token，删除原有的。直接回车，会重新生成。
 - 完成
 
-## 2. 重新配置模型、插件
-- 需要按第一只的步骤重新配置大模型
-- 安装企业微信插件
-- 配对企业微信
+## 复制企业微信插件
+- 由于已经安装过，再次安装会报错，所以直接将原来的复制过来
+- 目录：C:\Users\Administrator\.openclaw\extensions
 
-## 3. 所有命令都得加上--profile dgr3
-- openclaw --profile dgr3 gateway restart
-- openclaw --profile dgr3 dashboard
+## 2. 重新配置企业微信
+- openclaw --profile code configure
+- 选择Channels-> Configure/link
+- 选择企业微信，后面操作与第一次一样
+
+## 复制openclaw.json到.openclaw-code目录
+
+## 3. 所有命令都得加上--profile code
+- openclaw --profile code gateway restart
+- openclaw --profile code dashboard
 - openclaw --profile dgr3 gateway install
